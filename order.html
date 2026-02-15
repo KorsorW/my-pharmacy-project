@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Place an Order — Kingdom of God Pharmacy</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="site">
+    <header class="site-header">
+      <div class="brand"><img src="/pharm img.jpg" alt="Logo" class="logo"><div class="brand-text"><h1>Kingdom of God Pharmacy</h1></div></div>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="order.html" class="active">Place Order</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <h2>Place Your Order</h2>
+      <p class="lead">Fill the form below. When you click "Send Order", your email client will open and you can send the order to our pharmacy email.</p>
+
+      <!-- Using mailto: to send order via user's email client -->
+      <form class="order-form" action="mailto:pharmacy-email@example.com" method="post" enctype="text/plain">
+        <label for="name">Full name</label>
+        <input id="name" name="Customer Name" type="text" required placeholder="Your full name">
+
+        <label for="phone">Phone number</label>
+        <input id="phone" name="Phone" type="text" required placeholder="+231 77xxxxxxx">
+
+        <label for="email">Email address</label>
+        <input id="email" name="Email" type="email" placeholder="you@example.com">
+
+        <label for="address">Delivery address</label>
+        <input id="address" name="Delivery Address" type="text" placeholder="Your full address in Foya District" required>
+
+        <label for="items">Order details (list medicines, quantity, strength)</label>
+        <textarea id="items" name="Order Items" rows="6" placeholder="e.g. Amoxicillin 500mg — 1 pack (10 tablets)"></textarea>
+
+        <label for="notes">Notes / Prescription (optional)</label>
+        <textarea id="notes" name="Notes" rows="3" placeholder="Any special instructions or attach prescription later"></textarea>
+
+        <div class="form-helpers">
+          <small>Prefer to attach a prescription? Reply by email with attachment after sending this order.</small>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Send Order via Email</button>
+          <a href="contact.html" class="btn outline">Contact Us Directly</a>
+        </div>
+      </form>
+
+      <section class="order-guide">
+        <h3>Order & Delivery Guide</h3>
+        <ol>
+          <li>After you send the order by email, our staff will confirm prices and availability.</li>
+          <li>We will call or email you to confirm delivery time and payment options.</li>
+          <li>Payment can be made on delivery (cash) or other channels if arranged.</li>
+        </ol>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <small>&copy; 2025 Kingdom of God Pharmacy</small>
+    </footer>
+  </div>
+</body>
+</html>
