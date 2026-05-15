@@ -1,0 +1,1979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GlobeScholars Research Institute (GSRI) | Est. 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0B1F3A;
+    --navy-mid: #122847;
+    --navy-light: #1A3A5C;
+    --gold: #C8963E;
+    --gold-light: #E2B96A;
+    --gold-pale: #F5E6C8;
+    --cream: #FAF6EE;
+    --white: #FFFFFF;
+    --slate: #4A6480;
+    --slate-light: #7A9AB8;
+    --muted: #8FA5BB;
+    --text: #1A2E42;
+    --text-light: #4A6480;
+    --border: rgba(200, 150, 62, 0.2);
+    --shadow: 0 8px 40px rgba(11,31,58,0.12);
+    --shadow-lg: 0 20px 60px rgba(11,31,58,0.18);
+    --transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+  }
+ 
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+ 
+  html { scroll-behavior: smooth; }
+ 
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+ 
+  /* ===== NAV ===== */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    background: rgba(11,31,58,0.97);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(200,150,62,0.25);
+    padding: 0 2rem;
+    height: 68px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-brand {
+    display: flex; align-items: center; gap: 12px;
+    text-decoration: none;
+  }
+  .nav-logo {
+    width: 42px; height: 42px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700; font-size: 14px;
+    color: var(--navy); letter-spacing: 0.5px;
+  }
+  .nav-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem; font-weight: 600;
+    color: var(--white); letter-spacing: 0.3px;
+    line-height: 1.1;
+  }
+  .nav-name span { display: block; font-size: 0.68rem; font-weight: 300; color: var(--gold-light); letter-spacing: 2px; text-transform: uppercase; font-family: 'DM Sans', sans-serif; }
+  .nav-links {
+    display: flex; align-items: center; gap: 0.2rem;
+    list-style: none;
+  }
+  .nav-links a {
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: var(--transition);
+    text-transform: uppercase;
+  }
+  .nav-links a:hover { color: var(--gold-light); background: rgba(200,150,62,0.1); }
+  .nav-cta {
+    background: var(--gold) !important;
+    color: var(--navy) !important;
+    padding: 8px 18px !important;
+    border-radius: 4px !important;
+    font-weight: 600 !important;
+  }
+  .nav-cta:hover { background: var(--gold-light) !important; }
+  .hamburger { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; }
+  .hamburger span { display: block; width: 22px; height: 2px; background: var(--white); border-radius: 2px; transition: var(--transition); }
+ 
+  /* ===== HERO ===== */
+  #hero {
+    min-height: 100vh;
+    background: var(--navy);
+    position: relative;
+    display: flex; align-items: center;
+    overflow: hidden;
+    padding-top: 68px;
+  }
+  .hero-pattern {
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(circle at 20% 50%, rgba(200,150,62,0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(26,58,92,0.6) 0%, transparent 40%),
+      repeating-linear-gradient(0deg, transparent, transparent 80px, rgba(200,150,62,0.03) 80px, rgba(200,150,62,0.03) 81px),
+      repeating-linear-gradient(90deg, transparent, transparent 80px, rgba(200,150,62,0.03) 80px, rgba(200,150,62,0.03) 81px);
+  }
+  .hero-content {
+    position: relative; z-index: 2;
+    max-width: 1200px; margin: 0 auto;
+    padding: 6rem 2rem;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
+  }
+  .hero-left {}
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(200,150,62,0.12);
+    border: 1px solid rgba(200,150,62,0.3);
+    color: var(--gold-light);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+  .hero-badge::before { content: ''; width: 6px; height: 6px; background: var(--gold); border-radius: 50%; }
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.8rem, 5vw, 4.4rem);
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+  .hero-title em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+  .hero-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.5);
+    font-style: italic;
+    letter-spacing: 0.5px;
+    margin-bottom: 1.8rem;
+  }
+  .hero-desc {
+    color: rgba(255,255,255,0.65);
+    line-height: 1.75;
+    font-size: 0.95rem;
+    margin-bottom: 2.5rem;
+    max-width: 480px;
+  }
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--gold);
+    color: var(--navy);
+    border: none;
+    padding: 14px 28px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: var(--transition);
+    text-decoration: none;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(200,150,62,0.3); }
+  .btn-outline {
+    background: transparent;
+    color: var(--white);
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 14px 28px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 0.85rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: var(--transition);
+    text-decoration: none;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold-light); }
+  .hero-right {}
+  .hero-stats {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(200,150,62,0.2);
+    border-radius: 12px;
+    padding: 2.5rem;
+    backdrop-filter: blur(10px);
+  }
+  .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem; }
+  .stat-item { text-align: center; }
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--gold-light);
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 4px;
+  }
+  .discipline-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 0.5rem; }
+  .disc-tag {
+    padding: 5px 12px;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  .disc-tag.eng { background: rgba(59,130,246,0.15); color: #7BB3F0; border: 1px solid rgba(59,130,246,0.2); }
+  .disc-tag.biz { background: rgba(200,150,62,0.15); color: var(--gold-light); border: 1px solid var(--border); }
+  .disc-tag.soc { background: rgba(34,197,94,0.12); color: #6BCF8F; border: 1px solid rgba(34,197,94,0.2); }
+  .disc-tag.cs { background: rgba(168,85,247,0.15); color: #C084FC; border: 1px solid rgba(168,85,247,0.2); }
+  .disc-tag.pharma { background: rgba(236,72,153,0.12); color: #F0A0CC; border: 1px solid rgba(236,72,153,0.2); }
+  .disc-tag.med { background: rgba(239,68,68,0.12); color: #F89898; border: 1px solid rgba(239,68,68,0.2); }
+ 
+  /* ===== SECTION COMMON ===== */
+  section { padding: 100px 2rem; }
+  .container { max-width: 1200px; margin: 0 auto; }
+  .section-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.8rem;
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.15;
+    margin-bottom: 1rem;
+  }
+  .section-title.light { color: var(--white); }
+  .section-desc {
+    font-size: 1rem;
+    color: var(--text-light);
+    line-height: 1.75;
+    max-width: 600px;
+  }
+  .section-desc.light { color: rgba(255,255,255,0.6); }
+  .divider {
+    width: 60px; height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    margin-bottom: 1.5rem;
+    border-radius: 2px;
+  }
+ 
+  /* ===== ABOUT ===== */
+  #about { background: var(--white); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; margin-top: 4rem; }
+  .about-text p { color: var(--text-light); line-height: 1.85; font-size: 0.95rem; margin-bottom: 1.2rem; }
+  .values-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; }
+  .value-card {
+    padding: 1.2rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--cream);
+    transition: var(--transition);
+  }
+  .value-card:hover { border-color: var(--gold); transform: translateY(-2px); box-shadow: var(--shadow); }
+  .value-icon { font-size: 1.4rem; margin-bottom: 0.5rem; }
+  .value-name { font-weight: 600; font-size: 0.82rem; color: var(--navy); margin-bottom: 4px; }
+  .value-desc { font-size: 0.77rem; color: var(--text-light); line-height: 1.5; }
+  .mission-card {
+    background: var(--navy);
+    border-radius: 12px;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .mission-card::before {
+    content: '"';
+    position: absolute; top: -20px; right: 20px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 12rem;
+    color: rgba(200,150,62,0.08);
+    line-height: 1;
+  }
+  .mission-label { font-size: 0.68rem; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; font-weight: 600; }
+  .mission-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--white);
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+  }
+  .vision-label { font-size: 0.68rem; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; font-weight: 600; margin-top: 1.5rem; }
+  .vision-text {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.75;
+  }
+ 
+  /* ===== RESEARCH ===== */
+  #research { background: var(--cream); }
+  .disciplines-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3.5rem;
+  }
+  .disc-card {
+    background: var(--white);
+    border: 1px solid rgba(200,150,62,0.15);
+    border-radius: 10px;
+    padding: 2rem;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+  }
+  .disc-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    opacity: 0;
+    transition: var(--transition);
+  }
+  .disc-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--gold); }
+  .disc-card:hover::before { opacity: 1; }
+  .disc-card-icon {
+    width: 48px; height: 48px; border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+  }
+  .disc-card-title { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 700; color: var(--navy); margin-bottom: 0.6rem; }
+  .disc-card-desc { font-size: 0.83rem; color: var(--text-light); line-height: 1.65; margin-bottom: 1rem; }
+  .disc-focus { font-size: 0.73rem; color: var(--gold); font-weight: 600; letter-spacing: 0.5px; }
+ 
+  /* ===== OBJECTIVES ===== */
+  #objectives { background: var(--navy); }
+  .objectives-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3.5rem; }
+  .obj-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(200,150,62,0.15);
+    border-radius: 10px;
+    padding: 2rem;
+    transition: var(--transition);
+  }
+  .obj-card:hover { background: rgba(200,150,62,0.06); border-color: rgba(200,150,62,0.4); }
+  .obj-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgba(200,150,62,0.2);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  .obj-title { font-weight: 600; color: var(--gold-light); font-size: 0.9rem; margin-bottom: 0.8rem; }
+  .obj-desc { font-size: 0.83rem; color: rgba(255,255,255,0.55); line-height: 1.7; }
+ 
+  /* ===== IMPLEMENTATION ===== */
+  #implementation { background: var(--white); }
+  .phases-timeline { margin-top: 4rem; position: relative; }
+  .phases-timeline::before {
+    content: '';
+    position: absolute; left: 28px; top: 0; bottom: 0; width: 2px;
+    background: linear-gradient(180deg, var(--gold), rgba(200,150,62,0.1));
+  }
+  .phase-item { display: flex; gap: 2.5rem; margin-bottom: 3rem; position: relative; }
+  .phase-dot {
+    width: 58px; height: 58px; border-radius: 50%;
+    background: var(--navy);
+    border: 3px solid var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--gold);
+    flex-shrink: 0;
+    position: relative; z-index: 1;
+  }
+  .phase-content { padding-top: 6px; flex: 1; }
+  .phase-tag { font-size: 0.68rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 0.4rem; }
+  .phase-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem; }
+  .phase-desc { font-size: 0.85rem; color: var(--text-light); line-height: 1.7; margin-bottom: 1rem; }
+  .phase-items { list-style: none; }
+  .phase-items li {
+    font-size: 0.82rem;
+    color: var(--text-light);
+    padding: 4px 0 4px 18px;
+    position: relative;
+    line-height: 1.5;
+  }
+  .phase-items li::before { content: '→'; position: absolute; left: 0; color: var(--gold); font-size: 0.75rem; }
+ 
+  /* ===== LEADERSHIP ===== */
+  #leadership { background: var(--cream); }
+  .leadership-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 3.5rem; }
+  .leader-card {
+    background: var(--white);
+    border: 1px solid rgba(200,150,62,0.15);
+    border-radius: 10px;
+    padding: 1.8rem;
+    text-align: center;
+    transition: var(--transition);
+  }
+  .leader-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: var(--gold); }
+  .leader-avatar {
+    width: 72px; height: 72px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--navy), var(--navy-light));
+    margin: 0 auto 1rem;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--gold-light);
+    border: 2px solid rgba(200,150,62,0.3);
+  }
+  .leader-role { font-size: 0.68rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 4px; }
+  .leader-name { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem; }
+  .leader-desc { font-size: 0.78rem; color: var(--text-light); line-height: 1.5; }
+  .leadership-tiers { margin-top: 2rem; }
+  .tier-title { font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase; color: var(--text-light); font-weight: 600; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 12px; }
+  .tier-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+ 
+  /* ===== PUBLICATIONS ===== */
+  #publications { background: var(--white); }
+  .publications-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; margin-top: 3.5rem; }
+  .pub-card {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.8rem;
+    margin-bottom: 1.2rem;
+    transition: var(--transition);
+  }
+  .pub-card:hover { border-color: var(--gold); background: var(--white); }
+  .pub-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 0.7rem; flex-wrap: wrap; }
+  .pub-field {
+    font-size: 0.68rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;
+    padding: 3px 10px; border-radius: 3px;
+  }
+  .pub-year { font-size: 0.75rem; color: var(--muted); font-family: 'DM Mono', monospace; }
+  .pub-title { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem; line-height: 1.3; }
+  .pub-authors { font-size: 0.8rem; color: var(--text-light); margin-bottom: 0.6rem; }
+  .pub-journal { font-size: 0.78rem; color: var(--gold); font-style: italic; font-weight: 500; margin-bottom: 0.8rem; }
+  .pub-abstract { font-size: 0.82rem; color: var(--text-light); line-height: 1.6; margin-bottom: 1rem; }
+  .pub-actions { display: flex; gap: 0.7rem; }
+  .pub-btn {
+    font-size: 0.75rem; font-weight: 600; padding: 6px 14px; border-radius: 4px;
+    cursor: pointer; border: none; transition: var(--transition); letter-spacing: 0.3px;
+    text-decoration: none; display: inline-flex; align-items: center; gap: 5px;
+  }
+  .pub-btn.primary { background: var(--navy); color: var(--white); }
+  .pub-btn.primary:hover { background: var(--navy-light); }
+  .pub-btn.secondary { background: transparent; color: var(--text-light); border: 1px solid var(--border); }
+  .pub-btn.secondary:hover { border-color: var(--gold); color: var(--gold); }
+  .pub-sidebar {}
+  .sidebar-card {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.2rem;
+  }
+  .sidebar-title { font-weight: 600; font-size: 0.85rem; color: var(--navy); margin-bottom: 1rem; }
+  .filter-group { margin-bottom: 0.8rem; }
+  .filter-label { font-size: 0.72rem; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-bottom: 0.5rem; }
+  .filter-options { display: flex; flex-wrap: wrap; gap: 6px; }
+  .filter-btn {
+    font-size: 0.73rem; padding: 4px 10px; border-radius: 3px;
+    border: 1px solid var(--border); background: var(--white);
+    cursor: pointer; transition: var(--transition); font-family: 'DM Sans', sans-serif;
+  }
+  .filter-btn:hover, .filter-btn.active { background: var(--navy); color: var(--white); border-color: var(--navy); }
+  .pub-search {
+    width: 100%; padding: 10px 14px; border: 1px solid var(--border);
+    border-radius: 6px; font-size: 0.85rem; font-family: 'DM Sans', sans-serif;
+    background: var(--white); color: var(--text); outline: none;
+    transition: var(--transition); margin-bottom: 1rem;
+  }
+  .pub-search:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(200,150,62,0.1); }
+ 
+  /* ===== MEMBERSHIP ===== */
+  #membership { background: var(--navy); }
+  .membership-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 3.5rem; align-items: start; }
+  .criteria-list { list-style: none; margin-top: 1.5rem; }
+  .criteria-list li {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.5;
+  }
+  .criteria-list li::before {
+    content: '✓';
+    color: var(--gold);
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .apply-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(200,150,62,0.25);
+    border-radius: 12px;
+    padding: 2.5rem;
+  }
+  .apply-title { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: var(--white); margin-bottom: 0.5rem; }
+  .apply-subtitle { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 1.8rem; }
+  .form-group { margin-bottom: 1rem; }
+  .form-label { font-size: 0.78rem; font-weight: 600; color: rgba(255,255,255,0.7); margin-bottom: 6px; display: block; letter-spacing: 0.3px; }
+  .form-input, .form-select, .form-textarea {
+    width: 100%; padding: 11px 14px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 6px;
+    color: var(--white);
+    font-size: 0.88rem;
+    font-family: 'DM Sans', sans-serif;
+    outline: none;
+    transition: var(--transition);
+  }
+  .form-input::placeholder, .form-textarea::placeholder { color: rgba(255,255,255,0.3); }
+  .form-input:focus, .form-select:focus, .form-textarea:focus {
+    border-color: var(--gold);
+    background: rgba(200,150,62,0.06);
+  }
+  .form-select { appearance: none; cursor: pointer; }
+  .form-select option { background: var(--navy); }
+  .form-textarea { min-height: 90px; resize: vertical; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .submit-btn {
+    width: 100%;
+    background: var(--gold);
+    color: var(--navy);
+    border: none;
+    padding: 14px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.88rem;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: var(--transition);
+    margin-top: 0.5rem;
+  }
+  .submit-btn:hover { background: var(--gold-light); transform: translateY(-1px); }
+ 
+  /* ===== TOOLS ===== */
+  #tools { background: var(--cream); }
+  .tools-table-wrap { overflow-x: auto; margin-top: 3rem; border-radius: 10px; border: 1px solid var(--border); }
+  table { width: 100%; border-collapse: collapse; background: var(--white); }
+  th {
+    background: var(--navy);
+    color: rgba(255,255,255,0.75);
+    font-size: 0.72rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 14px 18px;
+    text-align: left;
+  }
+  td { padding: 13px 18px; font-size: 0.84rem; color: var(--text); border-bottom: 1px solid var(--border); }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: var(--cream); }
+  .access-free { color: #27AE60; font-weight: 600; font-size: 0.78rem; }
+  .access-paid { color: #E74C3C; font-weight: 600; font-size: 0.78rem; }
+  .access-ltd { color: #E67E22; font-weight: 600; font-size: 0.78rem; }
+ 
+  /* ===== CONTACT ===== */
+  #contact { background: var(--white); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; margin-top: 3.5rem; }
+  .contact-info {}
+  .contact-item {
+    display: flex; align-items: flex-start; gap: 1rem;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .contact-icon {
+    width: 40px; height: 40px; border-radius: 8px;
+    background: var(--cream);
+    border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+  .contact-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); font-weight: 600; margin-bottom: 3px; }
+  .contact-value { font-size: 0.9rem; color: var(--navy); font-weight: 500; }
+  .network-flags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1.5rem; }
+  .flag-chip {
+    padding: 5px 12px; border-radius: 4px;
+    background: var(--cream); border: 1px solid var(--border);
+    font-size: 0.75rem; font-weight: 600; color: var(--text-light);
+  }
+  .contact-form { background: var(--cream); border-radius: 12px; padding: 2.5rem; border: 1px solid var(--border); }
+  .contact-form .form-input,
+  .contact-form .form-textarea,
+  .contact-form .form-select {
+    background: var(--white); color: var(--text);
+    border: 1px solid var(--border);
+  }
+  .contact-form .form-input::placeholder,
+  .contact-form .form-textarea::placeholder { color: var(--muted); }
+  .contact-form .form-input:focus,
+  .contact-form .form-textarea:focus {
+    border-color: var(--gold);
+    background: var(--white);
+  }
+  .contact-form .form-label { color: var(--text-light); }
+  .contact-form .submit-btn { background: var(--navy); color: var(--white); }
+  .contact-form .submit-btn:hover { background: var(--navy-light); }
+ 
+  /* ===== MEMBER PORTAL ===== */
+  #portal { background: var(--navy); }
+  .portal-wrapper {
+    max-width: 900px; margin: 0 auto;
+  }
+  .portal-header { text-align: center; margin-bottom: 3rem; }
+  .portal-tabs {
+    display: flex; gap: 0; background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(200,150,62,0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 480px; margin: 0 auto 2.5rem;
+  }
+  .portal-tab {
+    flex: 1; padding: 12px;
+    background: transparent;
+    border: none;
+    color: rgba(255,255,255,0.5);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    letter-spacing: 0.3px;
+  }
+  .portal-tab.active { background: var(--gold); color: var(--navy); }
+  .portal-panel { display: none; }
+  .portal-panel.active { display: block; }
+  .portal-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(200,150,62,0.2);
+    border-radius: 12px;
+    padding: 2.5rem;
+    max-width: 480px; margin: 0 auto;
+  }
+  .portal-title { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 600; color: var(--white); margin-bottom: 0.4rem; }
+  .portal-subtitle { font-size: 0.85rem; color: rgba(255,255,255,0.45); margin-bottom: 2rem; }
+  .portal-card .form-input { margin-bottom: 0; }
+  .forgot-link { text-align: right; margin-top: 4px; }
+  .forgot-link a { font-size: 0.78rem; color: var(--gold-light); text-decoration: none; }
+  .forgot-link a:hover { text-decoration: underline; }
+ 
+  /* Publish Form */
+  .publish-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(200,150,62,0.2);
+    border-radius: 12px;
+    padding: 2.5rem;
+  }
+  .publish-card .form-input,
+  .publish-card .form-select,
+  .publish-card .form-textarea {
+    background: rgba(255,255,255,0.06);
+    border-color: rgba(255,255,255,0.12);
+    color: var(--white);
+  }
+  .publish-card .form-label { color: rgba(255,255,255,0.7); }
+  .file-drop {
+    border: 2px dashed rgba(200,150,62,0.3);
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-bottom: 1rem;
+  }
+  .file-drop:hover { border-color: var(--gold); background: rgba(200,150,62,0.04); }
+  .file-drop-icon { font-size: 2rem; margin-bottom: 0.5rem; }
+  .file-drop-text { font-size: 0.85rem; color: rgba(255,255,255,0.5); }
+  .file-drop-text strong { color: var(--gold-light); }
+ 
+  /* ===== FOOTER ===== */
+  footer {
+    background: #060F1E;
+    padding: 4rem 2rem 2rem;
+    border-top: 1px solid rgba(200,150,62,0.15);
+  }
+  .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+  .footer-brand { }
+  .footer-logo {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 1rem;
+  }
+  .footer-logo-icon {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px; font-weight: 700; color: var(--navy);
+  }
+  .footer-logo-text { font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; font-weight: 600; color: var(--white); }
+  .footer-tagline { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 0.88rem; color: rgba(255,255,255,0.35); margin-bottom: 1rem; }
+  .footer-desc { font-size: 0.8rem; color: rgba(255,255,255,0.35); line-height: 1.7; }
+  .footer-heading { font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 1.2rem; }
+  .footer-links { list-style: none; }
+  .footer-links li { margin-bottom: 0.6rem; }
+  .footer-links a { font-size: 0.82rem; color: rgba(255,255,255,0.45); text-decoration: none; transition: var(--transition); }
+  .footer-links a:hover { color: var(--gold-light); }
+  .footer-bottom {
+    max-width: 1200px; margin: 0 auto;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: gap;
+    gap: 1rem;
+  }
+  .footer-copy { font-size: 0.78rem; color: rgba(255,255,255,0.25); }
+  .footer-legal { display: flex; gap: 1.5rem; }
+  .footer-legal a { font-size: 0.78rem; color: rgba(255,255,255,0.25); text-decoration: none; }
+  .footer-legal a:hover { color: var(--gold-light); }
+ 
+  /* ===== MODALS & NOTIFICATIONS ===== */
+  .modal-overlay {
+    position: fixed; inset: 0; z-index: 2000;
+    background: rgba(6,15,30,0.85);
+    backdrop-filter: blur(6px);
+    display: flex; align-items: center; justify-content: center; padding: 2rem;
+    opacity: 0; pointer-events: none; transition: opacity 0.3s;
+  }
+  .modal-overlay.open { opacity: 1; pointer-events: all; }
+  .modal {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 2.5rem;
+    max-width: 480px; width: 100%;
+    transform: translateY(20px); transition: transform 0.3s;
+    position: relative;
+  }
+  .modal-overlay.open .modal { transform: translateY(0); }
+  .modal-close {
+    position: absolute; top: 1rem; right: 1rem;
+    width: 32px; height: 32px; border-radius: 50%;
+    background: var(--cream); border: none; cursor: pointer;
+    font-size: 1.1rem; display: flex; align-items: center; justify-content: center;
+    transition: var(--transition);
+  }
+  .modal-close:hover { background: var(--border); }
+  .toast {
+    position: fixed; bottom: 2rem; right: 2rem; z-index: 3000;
+    background: var(--navy);
+    color: var(--white);
+    padding: 14px 20px;
+    border-radius: 8px;
+    border-left: 3px solid var(--gold);
+    font-size: 0.88rem;
+    box-shadow: var(--shadow-lg);
+    transform: translateX(120%); transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+    max-width: 320px;
+  }
+  .toast.show { transform: translateX(0); }
+  .toast.success { border-color: #27AE60; }
+  .toast.error { border-color: #E74C3C; }
+ 
+  /* ===== SCROLL ANIMATIONS ===== */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+  .stagger-1 { transition-delay: 0.1s; }
+  .stagger-2 { transition-delay: 0.2s; }
+  .stagger-3 { transition-delay: 0.3s; }
+  .stagger-4 { transition-delay: 0.4s; }
+  .stagger-5 { transition-delay: 0.5s; }
+  .stagger-6 { transition-delay: 0.6s; }
+ 
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 1024px) {
+    .disciplines-grid, .objectives-grid { grid-template-columns: repeat(2, 1fr); }
+    .leadership-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  }
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .hero-content, .about-grid, .membership-layout, .contact-grid, .publications-layout { grid-template-columns: 1fr; gap: 3rem; }
+    .disciplines-grid, .objectives-grid, .leadership-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .values-grid { grid-template-columns: 1fr; }
+    section { padding: 70px 1.2rem; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 480px) {
+    .hero-actions { flex-direction: column; }
+    .btn-primary, .btn-outline { justify-content: center; }
+  }
+ 
+  /* ===== UTILITY ===== */
+  .text-gold { color: var(--gold); }
+  .text-center { text-align: center; }
+  .mt-sm { margin-top: 0.5rem; }
+  .mt-md { margin-top: 1rem; }
+  .mt-lg { margin-top: 2rem; }
+  .flex { display: flex; }
+  .gap-sm { gap: 0.5rem; }
+  .items-center { align-items: center; }
+  .justify-between { justify-content: space-between; }
+  .w-full { width: 100%; }
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+</style>
+</head>
+<body>
+ 
+<!-- ===== NAVIGATION ===== -->
+<nav id="navbar">
+  <a href="#hero" class="nav-brand">
+    <div class="nav-logo">GSRI</div>
+    <div class="nav-name">GlobeScholars Research Institute <span>Est. 2026 · Monrovia, Liberia</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#leadership">Leadership</a></li>
+    <li><a href="#membership">Membership</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#portal" class="nav-cta">Member Portal</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+ 
+<!-- Mobile Nav -->
+<div id="mobile-nav" style="display:none; position:fixed; top:68px; left:0; right:0; background:rgba(11,31,58,0.98); z-index:999; padding:1.5rem; border-bottom:1px solid rgba(200,150,62,0.2);">
+  <ul style="list-style:none; display:flex; flex-direction:column; gap:0.2rem;">
+    <li><a href="#about" onclick="toggleMobileMenu()" style="display:block; padding:10px; color:rgba(255,255,255,0.8); text-decoration:none; font-size:0.9rem;">About</a></li>
+    <li><a href="#research" onclick="toggleMobileMenu()" style="display:block; padding:10px; color:rgba(255,255,255,0.8); text-decoration:none; font-size:0.9rem;">Research</a></li>
+    <li><a href="#publications" onclick="toggleMobileMenu()" style="display:block; padding:10px; color:rgba(255,255,255,0.8); text-decoration:none; font-size:0.9rem;">Publications</a></li>
+    <li><a href="#leadership" onclick="toggleMobileMenu()" style="display:block; padding:10px; color:rgba(255,255,255,0.8); text-decoration:none; font-size:0.9rem;">Leadership</a></li>
+    <li><a href="#membership" onclick="toggleMobileMenu()" style="display:block; padding:10px; color:rgba(255,255,255,0.8); text-decoration:none; font-size:0.9rem;">Membership</a></li>
+    <li><a href="#contact" onclick="toggleMobileMenu()" style="display:block; padding:10px; color:rgba(255,255,255,0.8); text-decoration:none; font-size:0.9rem;">Contact</a></li>
+    <li><a href="#portal" onclick="toggleMobileMenu()" style="display:block; padding:10px 14px; background:var(--gold); color:var(--navy); text-decoration:none; font-size:0.9rem; font-weight:700; border-radius:4px; margin-top:0.5rem;">Member Portal</a></li>
+  </ul>
+</div>
+ 
+<!-- ===== HERO ===== -->
+<section id="hero">
+  <div class="hero-pattern"></div>
+  <div class="hero-content container">
+    <div class="hero-left">
+      <div class="hero-badge">Established 2026 · Monrovia, Liberia</div>
+      <h1 class="hero-title">Where Curious Minds <em>Investigate</em> the World</h1>
+      <p class="hero-subtitle">"Advancing African Research Capacity, One Scholar at a Time"</p>
+      <p class="hero-desc">GlobeScholars Research Institute (GSRI) is a formally structured, multidisciplinary peer-research community training the next generation of African researchers across six disciplines — equipping students for postgraduate excellence, publication, and evidence-based practice.</p>
+      <div class="hero-actions">
+        <a href="#membership" class="btn-primary">Apply for Membership →</a>
+        <a href="#about" class="btn-outline">Learn More</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-stats">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-num">6</div>
+            <div class="stat-label">Disciplines</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">7+</div>
+            <div class="stat-label">Nations</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">20+</div>
+            <div class="stat-label">Researchers / Cohort</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">5</div>
+            <div class="stat-label">Phase Plan</div>
+          </div>
+        </div>
+        <div style="font-size:0.72rem; letter-spacing:1.5px; text-transform:uppercase; color:rgba(255,255,255,0.35); font-weight:600; margin-bottom:0.8rem;">Disciplines</div>
+        <div class="discipline-tags">
+          <span class="disc-tag eng">Engineering</span>
+          <span class="disc-tag biz">Business & Econ.</span>
+          <span class="disc-tag soc">Social Science</span>
+          <span class="disc-tag cs">Computer Science</span>
+          <span class="disc-tag pharma">Pharma. Sciences</span>
+          <span class="disc-tag med">Medicine</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <div class="container">
+    <div class="section-label fade-up">About GSRI</div>
+    <h2 class="section-title fade-up stagger-1">Building Africa's Research <br>Capacity from Within</h2>
+    <div class="about-grid">
+      <div class="about-text fade-up stagger-2">
+        <div class="divider"></div>
+        <p>Across Sub-Saharan Africa, the majority of tertiary students complete their undergraduate education without ever conducting a structured research project, submitting a paper for peer review, or receiving formal training in research methodology. This is not a reflection of intellectual capacity — it is a structural deficit.</p>
+        <p>GSRI is the direct institutional response to this observation. We are not a replacement for formal university education. We are a structured, parallel research community that equips students with the skills, experience, and outputs needed to compete at the highest academic levels.</p>
+        <p>Operating under GlobeScholars Pathways, LLC, GSRI brings together students from six disciplines within a rigorously governed peer-research community, producing original scholarly outputs and building the skills required for postgraduate study, academic publishing, and research-informed professional careers.</p>
+        <div class="values-grid" style="margin-top:2rem;">
+          <div class="value-card">
+            <div class="value-icon">🔬</div>
+            <div class="value-name">Intellectual Rigour</div>
+            <div class="value-desc">All work is held to the highest scholarly standard. There is no shortcut to genuine understanding.</div>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">🤝</div>
+            <div class="value-name">Collaborative Learning</div>
+            <div class="value-desc">Members grow together. The institute is a community of practice, not a collection of individuals.</div>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">⚖️</div>
+            <div class="value-name">Research Integrity</div>
+            <div class="value-desc">Honesty, transparency, and ethical conduct are non-negotiable at every stage of the research process.</div>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">🌍</div>
+            <div class="value-name">Inclusion & Access</div>
+            <div class="value-desc">Open to any student with genuine curiosity and commitment, regardless of background or prior experience.</div>
+          </div>
+        </div>
+      </div>
+      <div class="fade-up stagger-3">
+        <div class="mission-card">
+          <div class="mission-label">Mission Statement</div>
+          <div class="mission-text">"To build a multidisciplinary community of emerging researchers who develop the scholarly skills, intellectual discipline, and collaborative confidence needed to produce original work and drive evidence-based progress."</div>
+          <div class="vision-label">Vision Statement</div>
+          <div class="vision-text">To become the foremost peer-research community for students across Africa and the developing world — recognised for rigorous inquiry, cross-disciplinary collaboration, and an unwavering commitment to the advancement of knowledge and human development.</div>
+        </div>
+        <div style="margin-top:1.5rem; display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+          <div style="background:var(--cream); border:1px solid var(--border); border-radius:8px; padding:1.2rem; text-align:center;">
+            <div style="font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:700; color:var(--gold);">2026</div>
+            <div style="font-size:0.75rem; color:var(--text-light); text-transform:uppercase; letter-spacing:1px; font-weight:600;">Year Founded</div>
+          </div>
+          <div style="background:var(--cream); border:1px solid var(--border); border-radius:8px; padding:1.2rem; text-align:center;">
+            <div style="font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:700; color:var(--gold);">LLC</div>
+            <div style="font-size:0.75rem; color:var(--text-light); text-transform:uppercase; letter-spacing:1px; font-weight:600;">Under GlobeScholars Pathways</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ===== RESEARCH / DISCIPLINES ===== -->
+<section id="research">
+  <div class="container">
+    <div class="section-label fade-up">Fields of Study</div>
+    <h2 class="section-title fade-up stagger-1">Six Disciplines, <br>One Research Community</h2>
+    <p class="section-desc fade-up stagger-2">Each branch is led by a qualified Field Lead and supported by active research teams. Cross-disciplinary collaboration is a core feature of our research culture.</p>
+    <div class="disciplines-grid">
+      <div class="disc-card fade-up stagger-1">
+        <div class="disc-card-icon" style="background:rgba(59,130,246,0.08);">⚙️</div>
+        <div class="disc-card-title">Engineering</div>
+        <div class="disc-card-desc">Materials science, structural systems, electrical engineering, sustainable infrastructure, renewable energy, and applied mechanics. Research is primarily experimental, simulation-based, and computational.</div>
+        <div class="disc-focus">Infrastructure · Renewable Energy · Applied Mechanics</div>
+      </div>
+      <div class="disc-card fade-up stagger-2">
+        <div class="disc-card-icon" style="background:rgba(200,150,62,0.08);">📈</div>
+        <div class="disc-card-title">Business & Economics</div>
+        <div class="disc-card-desc">Financial markets, entrepreneurship, fintech, supply chain management, development economics, international trade, and organisational management with practical African market application.</div>
+        <div class="disc-focus">Development Econ. · Fintech · International Trade</div>
+      </div>
+      <div class="disc-card fade-up stagger-3">
+        <div class="disc-card-icon" style="background:rgba(34,197,94,0.08);">🌱</div>
+        <div class="disc-card-title">Social Science</div>
+        <div class="disc-card-desc">Sociology, political science, development studies, public policy, psychology, international relations, and migration studies. Qualitative, quantitative, and mixed-methods research.</div>
+        <div class="disc-focus">Governance · Public Policy · Development Studies</div>
+      </div>
+      <div class="disc-card fade-up stagger-4">
+        <div class="disc-card-icon" style="background:rgba(168,85,247,0.08);">💻</div>
+        <div class="disc-card-title">Computer Science</div>
+        <div class="disc-card-desc">Artificial intelligence, machine learning, data science, software engineering, cybersecurity, and human-computer interaction. Also serves as cross-disciplinary data analysis resource for all branches.</div>
+        <div class="disc-focus">AI · Machine Learning · Cybersecurity · Data Science</div>
+      </div>
+      <div class="disc-card fade-up stagger-5">
+        <div class="disc-card-icon" style="background:rgba(236,72,153,0.08);">🧪</div>
+        <div class="disc-card-title">Pharmaceutical Sciences</div>
+        <div class="disc-card-desc">Drug formulation, pharmacology, medicinal chemistry, clinical pharmacy, biopharmaceuticals, and pharmaceutical biotechnology. Committed to addressing pharmaceutical access challenges.</div>
+        <div class="disc-focus">Drug Formulation · Pharmacology · Biotechnology</div>
+      </div>
+      <div class="disc-card fade-up stagger-6">
+        <div class="disc-card-icon" style="background:rgba(239,68,68,0.08);">🏥</div>
+        <div class="disc-card-title">Medicine</div>
+        <div class="disc-card-desc">Clinical research, public health, epidemiology, biomedical sciences, global health, and healthcare systems analysis. Prioritises research relevant to African health challenges.</div>
+        <div class="disc-focus">Epidemiology · Public Health · Global Health</div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ===== STRATEGIC OBJECTIVES ===== -->
+<section id="objectives">
+  <div class="container">
+    <div class="section-label fade-up" style="color:var(--gold);">Strategic Objectives</div>
+    <h2 class="section-title light fade-up stagger-1">Six Measurable Goals <br>for Institutional Excellence</h2>
+    <p class="section-desc light fade-up stagger-2">Each objective is measurable, time-bound, and directly linked to GSRI's mission and the broader development agenda it serves.</p>
+    <div class="objectives-grid" style="margin-top:3.5rem;">
+      <div class="obj-card fade-up stagger-1">
+        <div class="obj-num">01</div>
+        <div class="obj-title">Build Research Capacity at Scale</div>
+        <div class="obj-desc">Train a minimum of 20 researchers per annual cohort across six disciplines, equipping each with demonstrable skills in research design, literature synthesis, data collection, and analysis within 12 months.</div>
+      </div>
+      <div class="obj-card fade-up stagger-2">
+        <div class="obj-num">02</div>
+        <div class="obj-title">Produce Original, Publishable Research</div>
+        <div class="obj-desc">Ensure every active research team produces at least one peer-reviewed paper, working paper, or formally presented research output per cycle — submitted to recognised academic journals or conferences.</div>
+      </div>
+      <div class="obj-card fade-up stagger-3">
+        <div class="obj-num">03</div>
+        <div class="obj-title">Establish a Sustainable Institutional Model</div>
+        <div class="obj-desc">Build an institutional framework — including governance, leadership, curriculum, and funding mechanisms — that can sustain independent operation and be replicated across African countries.</div>
+      </div>
+      <div class="obj-card fade-up stagger-4">
+        <div class="obj-num">04</div>
+        <div class="obj-title">Strengthen Postgraduate Readiness</div>
+        <div class="obj-desc">Target 70% of active members reporting increased academic confidence and at least 40% progressing to postgraduate study or research-related careers within three years of membership.</div>
+      </div>
+      <div class="obj-card fade-up stagger-5">
+        <div class="obj-num">05</div>
+        <div class="obj-title">Advance Cross-disciplinary Collaboration</div>
+        <div class="obj-desc">Facilitate at least two cross-disciplinary research projects per annual cycle, demonstrating the value of integrating perspectives from all six disciplines.</div>
+      </div>
+      <div class="obj-card fade-up stagger-6">
+        <div class="obj-num">06</div>
+        <div class="obj-title">Contribute to African Research Visibility</div>
+        <div class="obj-desc">Position African student-researchers as legitimate contributors to global scholarly discourse through publication, conference participation, and research addressing locally relevant challenges.</div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ===== IMPLEMENTATION PLAN ===== -->
+<section id="implementation">
+  <div class="container">
+    <div class="section-label fade-up">Implementation Plan</div>
+    <h2 class="section-title fade-up stagger-1">Five-Phase Roadmap to Full Operation</h2>
+    <p class="section-desc fade-up stagger-2">GSRI implements its mission through a structured five-phase plan spanning approximately twelve months from founding to full institutional operation. No phase is skipped.</p>
+    <div class="phases-timeline">
+      <div class="phase-item fade-up">
+        <div class="phase-dot">1</div>
+        <div class="phase-content">
+          <div class="phase-tag">Month 1 · Foundation</div>
+          <div class="phase-title">Form the Founding Circle</div>
+          <div class="phase-desc">Establishes the institutional core — all leadership roles filled, Charter signed, communication infrastructure set up, and inaugural meeting convened.</div>
+          <ul class="phase-items">
+            <li>Recruit 10–15 founding members across six disciplines</li>
+            <li>Convene inaugural Founding Meeting and establish vision</li>
+            <li>Appoint all leadership positions from Executive Director to Field Leads</li>
+            <li>Draft, review, and sign the GSRI Founding Charter and Constitution</li>
+          </ul>
+        </div>
+      </div>
+      <div class="phase-item fade-up">
+        <div class="phase-dot">2</div>
+        <div class="phase-content">
+          <div class="phase-tag">Month 2–3 · Education</div>
+          <div class="phase-title">Build Research Literacy</div>
+          <div class="phase-desc">Four structured workshops build the research literacy baseline of all members, delivered by the Trainer and Academic Director.</div>
+          <ul class="phase-items">
+            <li>Workshop 1: Introduction to Research — types, principles, methodologies, and ethics</li>
+            <li>Workshop 2: How to Read and Critique an Academic Paper</li>
+            <li>Workshop 3: The Literature Review — searching, synthesising, and citing</li>
+            <li>Workshop 4: Research Design — quantitative vs. qualitative approaches</li>
+          </ul>
+        </div>
+      </div>
+      <div class="phase-item fade-up">
+        <div class="phase-dot">3</div>
+        <div class="phase-content">
+          <div class="phase-tag">Month 4–5 · Execution</div>
+          <div class="phase-title">Launch First Research Projects</div>
+          <div class="phase-desc">Research teams form within each branch, research questions are identified, proposals submitted for review, and active data collection begins.</div>
+          <ul class="phase-items">
+            <li>Form research teams of 2–4 members around approved research questions</li>
+            <li>Submit formal one-page Research Proposals for Academic Director review</li>
+            <li>Conduct structured literature reviews — minimum 8–12 peer-reviewed sources</li>
+            <li>Begin data collection with bi-weekly progress check-ins</li>
+          </ul>
+        </div>
+      </div>
+      <div class="phase-item fade-up">
+        <div class="phase-dot">4</div>
+        <div class="phase-content">
+          <div class="phase-tag">Month 6–8 · Output</div>
+          <div class="phase-title">Write, Review & Present</div>
+          <div class="phase-desc">Research findings are written up, subjected to internal peer review, endorsed by the Faculty Advisor, and submitted for external publication.</div>
+          <ul class="phase-items">
+            <li>Produce complete research papers in standard IMRaD format</li>
+            <li>Internal peer review by at least one other GSRI team</li>
+            <li>Faculty Advisor formally reviews and endorses all papers</li>
+            <li>Host inaugural internal Research Symposium; submit to journals and preprint platforms</li>
+          </ul>
+        </div>
+      </div>
+      <div class="phase-item fade-up" style="margin-bottom:0;">
+        <div class="phase-dot">5</div>
+        <div class="phase-content">
+          <div class="phase-tag">Month 9+ · Growth</div>
+          <div class="phase-title">Scale, Institutionalise & Sustain</div>
+          <div class="phase-desc">The Institute consolidates first-cycle outputs, opens recruitment for a second cohort, and builds foundations for long-term sustainability and expansion.</div>
+          <ul class="phase-items">
+            <li>First cohort transitions to senior member and peer-mentor roles</li>
+            <li>Apply for university recognition, NGO registration as applicable</li>
+            <li>Establish public presence: website, LinkedIn, annual report</li>
+            <li>Expand to additional African countries within the GlobeScholars network</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ===== LEADERSHIP ===== -->
+<section id="leadership">
+  <div class="container">
+    <div class="section-label fade-up">Leadership</div>
+    <h2 class="section-title fade-up stagger-1">Governing with Clarity, <br>Accountability & Purpose</h2>
+    <p class="section-desc fade-up stagger-2">GSRI maintains a collaborative, merit-based culture with clear lines of accountability. All leadership roles carry a one-year renewable term.</p>
+ 
+    <div class="leadership-tiers" style="margin-top:3.5rem;">
+      <div class="tier-title fade-up">Executive Tier</div>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem;" class="fade-up stagger-1">
+        <div class="leader-card">
+          <div class="leader-avatar">FED</div>
+          <div class="leader-role">Founder & Executive Director</div>
+          <div class="leader-name">Executive Director</div>
+          <div class="leader-desc">Highest authority. Establishes strategic vision, sets institutional culture, and holds final authority over all major institutional decisions.</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-avatar">DG</div>
+          <div class="leader-role">Director General</div>
+          <div class="leader-name">Director General</div>
+          <div class="leader-desc">Chief operating officer and second-in-command. Oversees daily governance and coordinates all departments and branches.</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-avatar">DD</div>
+          <div class="leader-role">Deputy Director</div>
+          <div class="leader-name">Deputy Director</div>
+          <div class="leader-desc">Coordinates across all six field branches, monitors project timelines, and serves as principal liaison between Field Leads and Executive Tier.</div>
+        </div>
+      </div>
+ 
+      <div class="tier-title fade-up" style="margin-top:2.5rem;">Academic & Administration Tier</div>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem;" class="fade-up stagger-1">
+        <div class="leader-card">
+          <div class="leader-avatar">AD</div>
+          <div class="leader-role">Academic Director</div>
+          <div class="leader-name">Academic Director</div>
+          <div class="leader-desc">Senior academic authority. Upholds scholarly integrity, oversees the research training curriculum, and holds final authority on publication standards.</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-avatar">FA</div>
+          <div class="leader-role">Faculty Advisor</div>
+          <div class="leader-name">Faculty Advisor</div>
+          <div class="leader-desc">Senior external academic — professor or senior researcher — who provides independent scholarly guidance and formally endorses all research outputs.</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-avatar">SG</div>
+          <div class="leader-role">Secretary General</div>
+          <div class="leader-name">Secretary General</div>
+          <div class="leader-desc">Manages all official communications, maintains records, administers the GSRI document repository, and acts as institutional memory of GSRI.</div>
+        </div>
+      </div>
+ 
+      <div class="tier-title fade-up" style="margin-top:2.5rem;">Field Leadership — Six Disciplinary Branches</div>
+      <div class="leadership-grid fade-up stagger-1">
+        <div class="leader-card">
+          <div class="leader-avatar" style="background:linear-gradient(135deg,#1e3a5f,#3b82f6);">EFL</div>
+          <div class="leader-role" style="color:#7BB3F0;">Engineering</div>
+          <div class="leader-name">Engineering Field Lead</div>
+          <div class="leader-desc">Guides experimental and computational research. Mentors branch members in technical methodologies.</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-avatar" style="background:linear-gradient(135deg,#3a2800,#c8963e);">BEL</div>
+          <div class="leader-role" style="color:var(--gold);">Business & Econ.</div>
+          <div class="leader-name">Business & Economics Lead</div>
+          <div class="leader-desc">Directs quantitative and qualitative project designs in economic and management research.</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-avatar" style="background:linear-gradient(135deg,#0a2e18,#22c55e);">SSL</div>
+          <div class="leader-role" style="color:#6BCF8F;">Social Science</div>
+          <div class="leader-name">Social Science Field Lead</div>
+          <div class="leader-desc">Leads qualitative and mixed-methods research, oversees human-subject ethics protocols.</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-avatar" style="background:linear-gradient(135deg,#2e1a3a,#a855f7);">CSL</div>
+          <div class="leader-role" style="color:#C084FC;">Computer Science</div>
+          <div class="leader-name">Computer Science Lead</div>
+          <div class="leader-desc">Manages computational research and provides cross-disciplinary data analysis support.</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-avatar" style="background:linear-gradient(135deg,#3a0a1e,#ec4899);">PSL</div>
+          <div class="leader-role" style="color:#F0A0CC;">Pharma. Sciences</div>
+          <div class="leader-name">Pharmaceutical Sciences Lead</div>
+          <div class="leader-desc">Guides laboratory and literature-based pharmaceutical research with strict ethics adherence.</div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-avatar" style="background:linear-gradient(135deg,#3a0a0a,#ef4444);">MFL</div>
+          <div class="leader-role" style="color:#F89898;">Medicine</div>
+          <div class="leader-name">Medicine Field Lead</div>
+          <div class="leader-desc">Leads clinical, epidemiological, and public health research relevant to African populations.</div>
+        </div>
+      </div>
+    </div>
+ 
+    <!-- Meeting Cadence Table -->
+    <div style="margin-top:4rem;" class="fade-up">
+      <div class="tier-title">Governance & Meeting Cadence</div>
+      <div class="tools-table-wrap" style="margin-top:1rem;">
+        <table>
+          <thead>
+            <tr><th>Meeting Type</th><th>Frequency</th><th>Participants</th><th>Duration</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Full Institute Meeting</strong></td><td>Monthly</td><td>All members</td><td>90 minutes</td></tr>
+            <tr><td><strong>Branch Meeting</strong></td><td>Bi-weekly</td><td>Per discipline</td><td>60 minutes</td></tr>
+            <tr><td><strong>Research Team Check-in</strong></td><td>Weekly</td><td>Project team (3–5)</td><td>30–45 minutes</td></tr>
+            <tr><td><strong>Leadership Meeting</strong></td><td>Monthly</td><td>All leaders</td><td>45 minutes</td></tr>
+            <tr><td><strong>Academic Review Session</strong></td><td>Monthly</td><td>Academic Dir. + Leads</td><td>60 minutes</td></tr>
+            <tr><td><strong>Faculty Advisor Briefing</strong></td><td>Quarterly</td><td>Academic Dir. + Advisor</td><td>45 minutes</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ===== PUBLICATIONS ===== -->
+<section id="publications">
+  <div class="container">
+    <div class="section-label fade-up">Research Publications</div>
+    <h2 class="section-title fade-up stagger-1">Scholarly Outputs from <br>GSRI Research Teams</h2>
+    <p class="section-desc fade-up stagger-2">All research published under GSRI has undergone rigorous internal peer review and Faculty Advisor endorsement before external submission.</p>
+    <div class="publications-layout" style="margin-top:3rem;">
+      <div class="pub-main fade-up">
+        <div id="pub-list">
+          <!-- Publications will be rendered by JS -->
+        </div>
+        <div id="no-pubs" style="display:none; text-align:center; padding:3rem 1rem; color:var(--text-light);">
+          <div style="font-size:2.5rem; margin-bottom:1rem;">📄</div>
+          <p style="font-size:0.9rem;">No publications match your search.</p>
+        </div>
+      </div>
+      <div class="pub-sidebar fade-up stagger-2">
+        <div class="sidebar-card">
+          <div class="sidebar-title">Search Publications</div>
+          <input type="text" class="pub-search" placeholder="Search by title, author…" oninput="filterPubs()" id="pub-search-input">
+          <div class="filter-group">
+            <div class="filter-label">Discipline</div>
+            <div class="filter-options" id="disc-filters">
+              <button class="filter-btn active" onclick="setFilter('disc', 'all', this)">All</button>
+              <button class="filter-btn" onclick="setFilter('disc', 'Engineering', this)">Engineering</button>
+              <button class="filter-btn" onclick="setFilter('disc', 'Business', this)">Business</button>
+              <button class="filter-btn" onclick="setFilter('disc', 'Social Science', this)">Social Sci.</button>
+              <button class="filter-btn" onclick="setFilter('disc', 'Computer Science', this)">CS</button>
+              <button class="filter-btn" onclick="setFilter('disc', 'Medicine', this)">Medicine</button>
+            </div>
+          </div>
+          <div class="filter-group" style="margin-top:1rem;">
+            <div class="filter-label">Year</div>
+            <div class="filter-options" id="year-filters">
+              <button class="filter-btn active" onclick="setFilter('year', 'all', this)">All</button>
+              <button class="filter-btn" onclick="setFilter('year', '2026', this)">2026</button>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-card">
+          <div class="sidebar-title">Research Platforms</div>
+          <div style="display:flex; flex-direction:column; gap:0.6rem; margin-top:0.5rem;">
+            <a href="https://ssrn.com" target="_blank" style="display:flex;align-items:center;gap:8px;font-size:0.82rem;color:var(--text-light);text-decoration:none;padding:6px 0;border-bottom:1px solid var(--border);">📄 SSRN — Business & Economics</a>
+            <a href="https://arxiv.org" target="_blank" style="display:flex;align-items:center;gap:8px;font-size:0.82rem;color:var(--text-light);text-decoration:none;padding:6px 0;border-bottom:1px solid var(--border);">📄 arXiv — CS & Engineering</a>
+            <a href="https://pubmed.ncbi.nlm.nih.gov" target="_blank" style="display:flex;align-items:center;gap:8px;font-size:0.82rem;color:var(--text-light);text-decoration:none;padding:6px 0;border-bottom:1px solid var(--border);">📄 PubMed — Medicine & Pharma</a>
+            <a href="https://www.researchgate.net" target="_blank" style="display:flex;align-items:center;gap:8px;font-size:0.82rem;color:var(--text-light);text-decoration:none;padding:6px 0;">📄 ResearchGate — All Fields</a>
+          </div>
+        </div>
+        <div class="sidebar-card" style="text-align:center;">
+          <div style="font-size:2rem; margin-bottom:0.8rem;">🎓</div>
+          <div class="sidebar-title" style="margin-bottom:0.5rem;">Are you a member?</div>
+          <p style="font-size:0.8rem; color:var(--text-light); margin-bottom:1rem;">Log in to the Member Portal to submit your published paper.</p>
+          <a href="#portal" class="pub-btn primary" style="display:inline-block;">Login to Portal</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ===== MEMBERSHIP ===== -->
+<section id="membership">
+  <div class="container">
+    <div class="section-label fade-up" style="color:var(--gold);">Join GSRI</div>
+    <h2 class="section-title light fade-up stagger-1">Membership for Scholars <br>Who Think Deeply</h2>
+    <div class="membership-layout">
+      <div class="fade-up stagger-1">
+        <div class="divider"></div>
+        <p style="color:rgba(255,255,255,0.65); font-size:0.95rem; line-height:1.75; margin-bottom:1.5rem;">Membership is not determined by prior grades, institutional prestige, or research experience. It is determined entirely by attitude, commitment, and demonstrated intellectual engagement.</p>
+        <p style="font-size:0.8rem; font-weight:600; letter-spacing:1px; text-transform:uppercase; color:var(--gold); margin-bottom:1rem;">Ideal Member Profile</p>
+        <ul class="criteria-list">
+          <li>Reads and engages with materials beyond formally assigned coursework</li>
+          <li>Asks deeper questions — concerned with understanding, not merely completion</li>
+          <li>Has a thesis, dissertation, or independent intellectual project mindset</li>
+          <li>Can commit 4–6 focused, consistent hours per week to GSRI activities</li>
+          <li>Meets deadlines reliably and follows through on institutional commitments</li>
+          <li>Has an interest in postgraduate study, academic publishing, or research-informed practice</li>
+          <li>Collaborates constructively — elevates peers rather than competing against them</li>
+        </ul>
+        <div style="margin-top:2rem; background:rgba(200,150,62,0.08); border:1px solid rgba(200,150,62,0.2); border-radius:8px; padding:1.5rem;">
+          <div style="font-size:0.75rem; font-weight:600; letter-spacing:1px; text-transform:uppercase; color:var(--gold); margin-bottom:0.8rem;">Network Reach</div>
+          <div class="network-flags">
+            <span class="flag-chip" style="background:rgba(255,255,255,0.05);color:rgba(255,255,255,0.6);border-color:rgba(255,255,255,0.1);">🇱🇷 Liberia</span>
+            <span class="flag-chip" style="background:rgba(255,255,255,0.05);color:rgba(255,255,255,0.6);border-color:rgba(255,255,255,0.1);">🇸🇱 Sierra Leone</span>
+            <span class="flag-chip" style="background:rgba(255,255,255,0.05);color:rgba(255,255,255,0.6);border-color:rgba(255,255,255,0.1);">🇬🇭 Ghana</span>
+            <span class="flag-chip" style="background:rgba(255,255,255,0.05);color:rgba(255,255,255,0.6);border-color:rgba(255,255,255,0.1);">🇿🇼 Zimbabwe</span>
+            <span class="flag-chip" style="background:rgba(255,255,255,0.05);color:rgba(255,255,255,0.6);border-color:rgba(255,255,255,0.1);">🇹🇿 Tanzania</span>
+            <span class="flag-chip" style="background:rgba(255,255,255,0.05);color:rgba(255,255,255,0.6);border-color:rgba(255,255,255,0.1);">🇸🇿 Swaziland</span>
+          </div>
+        </div>
+      </div>
+      <div class="fade-up stagger-2">
+        <div class="apply-card">
+          <div class="apply-title">Apply for Membership</div>
+          <div class="apply-subtitle">Join the 2026 founding or subsequent cohort</div>
+          <form id="apply-form" onsubmit="submitApplication(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">First Name *</label>
+                <input type="text" class="form-input" placeholder="John" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Last Name *</label>
+                <input type="text" class="form-input" placeholder="Doe" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email Address *</label>
+              <input type="email" class="form-input" placeholder="john.doe@university.edu" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">University / Institution *</label>
+              <input type="text" class="form-input" placeholder="University of Liberia" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Country *</label>
+              <select class="form-select" required>
+                <option value="">Select country…</option>
+                <option>Liberia</option><option>Sierra Leone</option><option>Ghana</option>
+                <option>Zimbabwe</option><option>Tanzania</option><option>Swaziland</option><option>Other African Country</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Discipline of Interest *</label>
+              <select class="form-select" required>
+                <option value="">Select discipline…</option>
+                <option>Engineering</option><option>Business & Economics</option>
+                <option>Social Science</option><option>Computer Science</option>
+                <option>Pharmaceutical Sciences</option><option>Medicine</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Filter Question: What research question in your field do you wish had already been answered — and why does it matter? *</label>
+              <textarea class="form-textarea" rows="4" placeholder="Write your response here… (This is the most important part of your application)" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit Application →</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ===== TOOLS & INFRASTRUCTURE ===== -->
+<section id="tools">
+  <div class="container">
+    <div class="section-label fade-up">Research Infrastructure</div>
+    <h2 class="section-title fade-up stagger-1">Tools & Platforms Available <br>to All GSRI Members</h2>
+    <p class="section-desc fade-up stagger-2">The majority of core tools are available at no cost, ensuring equitable access regardless of a member's financial circumstances. All members are expected to establish their core tool set within the first two weeks of joining.</p>
+    <div class="tools-table-wrap fade-up stagger-2">
+      <table>
+        <thead>
+          <tr><th>Tool / Platform</th><th>Purpose</th><th>Disciplines</th><th>Access</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Google Scholar</strong></td><td>Peer-reviewed academic paper search</td><td>All Fields</td><td><span class="access-free">Free</span></td></tr>
+          <tr><td><strong>Mendeley / Zotero</strong></td><td>Reference and citation management</td><td>All Fields</td><td><span class="access-free">Free</span></td></tr>
+          <tr><td><strong>ResearchGate</strong></td><td>Research sharing and scholarly networking</td><td>All Fields</td><td><span class="access-free">Free</span></td></tr>
+          <tr><td><strong>SSRN</strong></td><td>Preprints — Business, Economics, Law</td><td>Business / Social Sci.</td><td><span class="access-free">Free</span></td></tr>
+          <tr><td><strong>arXiv</strong></td><td>Preprints — CS, Engineering, Sciences</td><td>CS / Engineering</td><td><span class="access-free">Free</span></td></tr>
+          <tr><td><strong>JSTOR</strong></td><td>Social Sciences, Humanities, Economics</td><td>Social Sci. / Business</td><td><span class="access-ltd">Free (ltd.)</span></td></tr>
+          <tr><td><strong>PubMed / MEDLINE</strong></td><td>Biomedical and health sciences literature</td><td>Medicine / Pharma</td><td><span class="access-free">Free</span></td></tr>
+          <tr><td><strong>ClinicalTrials.gov</strong></td><td>Clinical and pharmaceutical trial registry</td><td>Medicine / Pharma</td><td><span class="access-free">Free</span></td></tr>
+          <tr><td><strong>ChemDraw / MarvinSketch</strong></td><td>Chemical structure drawing and analysis</td><td>Pharma Sciences</td><td><span class="access-free">Free (lite)</span></td></tr>
+          <tr><td><strong>GraphPad Prism</strong></td><td>Biostatistics and clinical data analysis</td><td>Medicine / Pharma</td><td><span class="access-paid">Paid</span></td></tr>
+          <tr><td><strong>SPSS / R / Python</strong></td><td>Quantitative data analysis and statistics</td><td>Business / CS / Eng.</td><td><span class="access-free">R & Py: Free</span></td></tr>
+          <tr><td><strong>Overleaf (LaTeX)</strong></td><td>Professional academic paper typesetting</td><td>CS / Engineering</td><td><span class="access-free">Free</span></td></tr>
+          <tr><td><strong>Notion / Google Drive</strong></td><td>Shared workspace and document management</td><td>All Fields</td><td><span class="access-free">Free</span></td></tr>
+          <tr><td><strong>Grammarly</strong></td><td>Academic writing grammar and clarity editing</td><td>All Fields</td><td><span class="access-free">Free (basic)</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+ 
+<!-- ===== MEMBER PORTAL ===== -->
+<section id="portal">
+  <div class="container">
+    <div class="portal-wrapper">
+      <div class="portal-header">
+        <div class="section-label" style="color:var(--gold); text-align:center;">Member Portal</div>
+        <h2 class="section-title light" style="text-align:center;">GSRI Member Login & <br>Publication Submission</h2>
+        <p class="section-desc light" style="margin:0.8rem auto 0; text-align:center;">Active GSRI members can log in to access their dashboard, track research progress, and submit their published papers to the institutional repository.</p>
+      </div>
+ 
+      <div class="portal-tabs">
+        <button class="portal-tab active" onclick="switchTab('login')">Member Login</button>
+        <button class="portal-tab" onclick="switchTab('publish')">Submit Publication</button>
+        <button class="portal-tab" onclick="switchTab('register')">Register</button>
+      </div>
+ 
+      <!-- LOGIN PANEL -->
+      <div class="portal-panel active" id="tab-login">
+        <div class="portal-card">
+          <div class="portal-title">Welcome Back</div>
+          <div class="portal-subtitle">Sign in to your GSRI member account</div>
+          <form onsubmit="handleLogin(event)">
+            <div class="form-group">
+              <label class="form-label">Email Address</label>
+              <input type="email" class="form-input" id="login-email" placeholder="your.email@university.edu" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Password</label>
+              <input type="password" class="form-input" id="login-password" placeholder="Enter your password" required>
+            </div>
+            <div class="forgot-link">
+              <a href="#" onclick="showForgotModal(event)">Forgot password?</a>
+            </div>
+            <button type="submit" class="submit-btn" style="margin-top:1.2rem;">Sign In →</button>
+          </form>
+          <p style="text-align:center; margin-top:1.2rem; font-size:0.8rem; color:rgba(255,255,255,0.4);">Don't have an account? <a href="#" onclick="switchTab('register'); return false;" style="color:var(--gold-light);">Register here</a></p>
+        </div>
+      </div>
+ 
+      <!-- PUBLISH PANEL -->
+      <div class="portal-panel" id="tab-publish">
+        <div class="publish-card">
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:0.4rem;">
+            <div style="font-size:1.5rem;">📤</div>
+            <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.6rem; font-weight:600; color:var(--white);">Submit Published Paper</h3>
+          </div>
+          <p style="font-size:0.83rem; color:rgba(255,255,255,0.45); margin-bottom:2rem;">For papers that have been accepted and published in a recognised journal, conference, or preprint platform. You must be logged in to submit.</p>
+          <form id="pub-submit-form" onsubmit="submitPublication(event)">
+            <div class="form-group">
+              <label class="form-label">Paper Title *</label>
+              <input type="text" class="form-input" placeholder="Full paper title as published" required>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Member Email (Corresponding) *</label>
+                <input type="email" class="form-input" placeholder="your.email@university.edu" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Discipline *</label>
+                <select class="form-select" required>
+                  <option value="">Select…</option>
+                  <option>Engineering</option><option>Business & Economics</option>
+                  <option>Social Science</option><option>Computer Science</option>
+                  <option>Pharmaceutical Sciences</option><option>Medicine</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">All Authors (as listed in publication) *</label>
+              <input type="text" class="form-input" placeholder="e.g. John Doe, Jane Smith, Emmanuel Kamara" required>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Journal / Conference / Platform *</label>
+                <input type="text" class="form-input" placeholder="e.g. PLOS ONE, arXiv, SSRN" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Publication Year *</label>
+                <input type="number" class="form-input" placeholder="2026" min="2026" max="2099" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">DOI or URL to Published Paper *</label>
+              <input type="text" class="form-input" placeholder="https://doi.org/... or https://arxiv.org/..." required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Abstract *</label>
+              <textarea class="form-textarea" rows="5" placeholder="Paste your paper's abstract here…" required></textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Keywords (comma-separated) *</label>
+              <input type="text" class="form-input" placeholder="e.g. machine learning, healthcare, Liberia" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Upload PDF (optional)</label>
+              <div class="file-drop" onclick="document.getElementById('pdf-upload').click()">
+                <div class="file-drop-icon">📁</div>
+                <div class="file-drop-text"><strong>Click to upload</strong> or drag & drop<br>PDF files only · Max 20MB</div>
+                <input type="file" id="pdf-upload" accept=".pdf" style="display:none" onchange="handleFileSelect(this)">
+              </div>
+              <div id="file-name" style="font-size:0.78rem; color:var(--gold-light); display:none;"></div>
+            </div>
+            <div class="form-group" style="display:flex; align-items:flex-start; gap:10px; margin-top:0.5rem;">
+              <input type="checkbox" id="confirm-published" style="margin-top:3px; accent-color:var(--gold);" required>
+              <label for="confirm-published" style="font-size:0.8rem; color:rgba(255,255,255,0.55); cursor:pointer; line-height:1.5;">I confirm this paper has been formally accepted and published in a peer-reviewed journal, conference, or recognised preprint platform, and that all listed authors have consented to this submission.</label>
+            </div>
+            <button type="submit" class="submit-btn">Submit to GSRI Repository →</button>
+          </form>
+        </div>
+      </div>
+ 
+      <!-- REGISTER PANEL -->
+      <div class="portal-panel" id="tab-register">
+        <div class="portal-card">
+          <div class="portal-title">Create Account</div>
+          <div class="portal-subtitle">For approved GSRI members only — you need a membership ID</div>
+          <form onsubmit="handleRegister(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">First Name *</label>
+                <input type="text" class="form-input" placeholder="John" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Last Name *</label>
+                <input type="text" class="form-input" placeholder="Doe" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email Address *</label>
+              <input type="email" class="form-input" placeholder="your.email@university.edu" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">GSRI Membership ID *</label>
+              <input type="text" class="form-input" placeholder="e.g. GSRI-2026-001" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Discipline *</label>
+              <select class="form-select" required>
+                <option value="">Select discipline…</option>
+                <option>Engineering</option><option>Business & Economics</option>
+                <option>Social Science</option><option>Computer Science</option>
+                <option>Pharmaceutical Sciences</option><option>Medicine</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Password *</label>
+                <input type="password" class="form-input" placeholder="Create password" required minlength="8">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Confirm Password *</label>
+                <input type="password" class="form-input" id="reg-confirm" placeholder="Confirm password" required>
+              </div>
+            </div>
+            <button type="submit" class="submit-btn">Create Account →</button>
+          </form>
+          <p style="text-align:center; margin-top:1.2rem; font-size:0.8rem; color:rgba(255,255,255,0.4);">Already have an account? <a href="#" onclick="switchTab('login'); return false;" style="color:var(--gold-light);">Sign in</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <div class="container">
+    <div class="section-label fade-up">Contact & Partnerships</div>
+    <h2 class="section-title fade-up stagger-1">Engage, Partner & <br>Collaborate with GSRI</h2>
+    <div class="contact-grid">
+      <div class="fade-up stagger-1">
+        <p style="color:var(--text-light); font-size:0.95rem; line-height:1.8; margin-bottom:2rem;">GSRI extends a standing invitation to academic institutions, funding organisations, development agencies, and partner universities to engage with, support, and collaborate with the Institute.</p>
+        <div class="contact-item">
+          <div class="contact-icon">🏛️</div>
+          <div>
+            <div class="contact-label">Institution</div>
+            <div class="contact-value">GlobeScholars Research Institute (GSRI)</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🏢</div>
+          <div>
+            <div class="contact-label">Parent Organisation</div>
+            <div class="contact-value">GlobeScholars Pathways, LLC</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-label">Headquarters</div>
+            <div class="contact-value">Monrovia, Liberia</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🌍</div>
+          <div>
+            <div class="contact-label">Operational Network</div>
+            <div class="contact-value">
+              <div class="network-flags" style="margin-top:6px;">
+                <span class="flag-chip">🇱🇷 Liberia</span>
+                <span class="flag-chip">🇸🇱 Sierra Leone</span>
+                <span class="flag-chip">🇬🇭 Ghana</span>
+                <span class="flag-chip">🇿🇼 Zimbabwe</span>
+                <span class="flag-chip">🇹🇿 Tanzania</span>
+                <span class="flag-chip">🇸🇿 Swaziland</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📅</div>
+          <div>
+            <div class="contact-label">Established</div>
+            <div class="contact-value">2026</div>
+          </div>
+        </div>
+        <div style="margin-top:2rem; padding:1.5rem; background:var(--cream); border-radius:8px; border:1px solid var(--border);">
+          <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.1rem; color:var(--navy); line-height:1.6;">"The advancement of any society ultimately depends on its capacity to generate new knowledge. GSRI exists to build that capacity — one researcher at a time."</p>
+        </div>
+      </div>
+      <div class="contact-form fade-up stagger-2">
+        <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.5rem; font-weight:600; color:var(--navy); margin-bottom:0.4rem;">Send a Message</h3>
+        <p style="font-size:0.82rem; color:var(--text-light); margin-bottom:1.5rem;">For partnership inquiries, funding proposals, academic collaborations, or general questions.</p>
+        <form onsubmit="submitContact(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Full Name *</label>
+              <input type="text" class="form-input" placeholder="Dr. Jane Smith" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Organisation *</label>
+              <input type="text" class="form-input" placeholder="University / Foundation" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email Address *</label>
+            <input type="email" class="form-input" placeholder="contact@organisation.org" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Inquiry Type</label>
+            <select class="form-select">
+              <option>Academic Partnership</option>
+              <option>Funding / Sponsorship</option>
+              <option>Faculty Advisor Interest</option>
+              <option>Research Collaboration</option>
+              <option>Membership Inquiry</option>
+              <option>Media / Press</option>
+              <option>General Inquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Message *</label>
+            <textarea class="form-textarea" rows="5" placeholder="Describe your inquiry or proposal…" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <div class="footer-logo-icon">GSRI</div>
+        <div class="footer-logo-text">GlobeScholars Research Institute</div>
+      </div>
+      <div class="footer-tagline">"Where Curious Minds Learn to Investigate the World"</div>
+      <div class="footer-desc">A multidisciplinary peer-research community under GlobeScholars Pathways, LLC. Building Africa's research capacity, one scholar at a time.</div>
+    </div>
+    <div>
+      <div class="footer-heading">Navigation</div>
+      <ul class="footer-links">
+        <li><a href="#about">About GSRI</a></li>
+        <li><a href="#research">Research Disciplines</a></li>
+        <li><a href="#objectives">Strategic Objectives</a></li>
+        <li><a href="#implementation">Implementation Plan</a></li>
+        <li><a href="#leadership">Leadership</a></li>
+        <li><a href="#publications">Publications</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading">Community</div>
+      <ul class="footer-links">
+        <li><a href="#membership">Join GSRI</a></li>
+        <li><a href="#tools">Research Tools</a></li>
+        <li><a href="#portal">Member Portal</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#contact">Partner with Us</a></li>
+        <li><a href="#contact">Funding Inquiries</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading">External Platforms</div>
+      <ul class="footer-links">
+        <li><a href="https://scholar.google.com" target="_blank">Google Scholar</a></li>
+        <li><a href="https://www.researchgate.net" target="_blank">ResearchGate</a></li>
+        <li><a href="https://ssrn.com" target="_blank">SSRN</a></li>
+        <li><a href="https://arxiv.org" target="_blank">arXiv</a></li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov" target="_blank">PubMed</a></li>
+        <li><a href="https://www.mendeley.com" target="_blank">Mendeley</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 GlobeScholars Research Institute (GSRI) · GlobeScholars Pathways, LLC · Monrovia, Liberia</div>
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Research Ethics Policy</a>
+      <a href="#">Charter</a>
+    </div>
+  </div>
+</footer>
+ 
+<!-- ===== MODALS ===== -->
+<!-- Forgot Password Modal -->
+<div class="modal-overlay" id="forgot-modal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('forgot-modal')">✕</button>
+    <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.6rem; color:var(--navy); margin-bottom:0.5rem;">Reset Password</h3>
+    <p style="font-size:0.85rem; color:var(--text-light); margin-bottom:1.5rem;">Enter your registered email address. If your account exists, a reset link will be sent.</p>
+    <form onsubmit="handleForgot(event)">
+      <div class="form-group">
+        <label class="form-label">Email Address</label>
+        <input type="email" class="form-input" style="background:var(--cream); color:var(--text); border:1px solid var(--border);" placeholder="your.email@university.edu" required>
+      </div>
+      <button type="submit" class="submit-btn" style="background:var(--navy);">Send Reset Link</button>
+    </form>
+  </div>
+</div>
+ 
+<!-- Success Modal -->
+<div class="modal-overlay" id="success-modal">
+  <div class="modal" style="text-align:center;">
+    <button class="modal-close" onclick="closeModal('success-modal')">✕</button>
+    <div style="font-size:3rem; margin-bottom:1rem;" id="success-icon">✅</div>
+    <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.8rem; color:var(--navy); margin-bottom:0.5rem;" id="success-title">Submitted Successfully!</h3>
+    <p style="font-size:0.88rem; color:var(--text-light); line-height:1.65;" id="success-body">Your submission has been received.</p>
+    <button onclick="closeModal('success-modal')" class="btn-primary" style="margin-top:1.5rem; justify-content:center;">Close</button>
+  </div>
+</div>
+ 
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+ 
+<script>
+// ===== PUBLICATION DATA =====
+const publications = [
+  {
+    id: 1,
+    title: "Renewable Energy Integration in Sub-Saharan African Power Grids: Challenges and Pathways",
+    authors: "Kofi Mensah, Amara Sesay, GSRI Engineering Research Team",
+    journal: "African Journal of Engineering Research",
+    year: "2026",
+    disc: "Engineering",
+    discColor: "#7BB3F0", discBg: "rgba(59,130,246,0.1)",
+    abstract: "This paper examines the technical and economic barriers to integrating solar and wind energy into the national power grids of sub-Saharan African nations, with specific analysis of the Liberian energy context. Using simulation-based modelling and policy analysis, we identify five priority intervention areas.",
+    doi: "https://doi.org/10.xxxx/ajer.2026.001"
+  },
+  {
+    id: 2,
+    title: "Mobile Money Adoption and Financial Inclusion Among Youth in West Africa: An Econometric Analysis",
+    authors: "Fatima Kamara, Emmanuel Doe, GSRI Business & Economics Team",
+    journal: "Journal of African Business",
+    year: "2026",
+    disc: "Business",
+    discColor: "#E2B96A", discBg: "rgba(200,150,62,0.1)",
+    abstract: "Drawing on primary survey data from 480 respondents across Liberia, Sierra Leone, and Ghana, this study analyses the determinants of mobile money adoption among youth aged 18–35. Our findings suggest that digital literacy, network effects, and trust in institutions are primary drivers.",
+    doi: "https://ssrn.com/abstract=xxxx"
+  },
+  {
+    id: 3,
+    title: "Post-Conflict Civic Trust and Democratic Participation: Evidence from Liberia's Youth Population",
+    authors: "David Weah, Josephine Kollie, GSRI Social Science Research Team",
+    journal: "African Politics & Society",
+    year: "2026",
+    disc: "Social Science",
+    discColor: "#6BCF8F", discBg: "rgba(34,197,94,0.1)",
+    abstract: "This mixed-methods study investigates the relationship between civic trust and democratic participation among Liberian youth post-2003. Using household survey data and in-depth interviews, we find that institutional trust — particularly in electoral bodies — is the strongest predictor of political engagement.",
+    doi: "https://doi.org/10.xxxx/aps.2026.003"
+  },
+  {
+    id: 4,
+    title: "Adapting Natural Language Processing Models for Low-Resource African Languages: A Case Study of Krio",
+    authors: "Isata Bangura, Michael Quaye, GSRI Computer Science Team",
+    journal: "arXiv Preprint",
+    year: "2026",
+    disc: "Computer Science",
+    discColor: "#C084FC", discBg: "rgba(168,85,247,0.1)",
+    abstract: "We present an approach to fine-tuning pre-trained transformer models on Krio (Sierra Leonean Creole) text data, achieving significant performance improvements on downstream tasks with limited training data. Our work demonstrates a reproducible methodology applicable to other low-resource African languages.",
+    doi: "https://arxiv.org/abs/xxxx.xxxxx"
+  },
+];
+ 
+let activeFilters = { disc: 'all', year: 'all' };
+ 
+function renderPubs() {
+  const search = document.getElementById('pub-search-input').value.toLowerCase();
+  const list = document.getElementById('pub-list');
+  const noPubs = document.getElementById('no-pubs');
+  const filtered = publications.filter(p => {
+    const matchDisc = activeFilters.disc === 'all' || p.disc.includes(activeFilters.disc);
+    const matchYear = activeFilters.year === 'all' || p.year === activeFilters.year;
+    const matchSearch = !search || p.title.toLowerCase().includes(search) || p.authors.toLowerCase().includes(search) || p.journal.toLowerCase().includes(search);
+    return matchDisc && matchYear && matchSearch;
+  });
+ 
+  if (filtered.length === 0) {
+    list.innerHTML = '';
+    noPubs.style.display = 'block';
+    return;
+  }
+  noPubs.style.display = 'none';
+  list.innerHTML = filtered.map(p => `
+    <div class="pub-card">
+      <div class="pub-meta">
+        <span class="pub-field" style="background:${p.discBg};color:${p.discColor};border:1px solid ${p.discColor}33;">${p.disc}</span>
+        <span class="pub-year">${p.year}</span>
+      </div>
+      <div class="pub-title">${p.title}</div>
+      <div class="pub-authors">${p.authors}</div>
+      <div class="pub-journal">${p.journal}</div>
+      <div class="pub-abstract">${p.abstract}</div>
+      <div class="pub-actions">
+        <a href="${p.doi}" target="_blank" class="pub-btn primary">View Paper ↗</a>
+        <button class="pub-btn secondary" onclick="copyDoi('${p.doi}')">Copy DOI</button>
+        <button class="pub-btn secondary">Cite</button>
+      </div>
+    </div>
+  `).join('');
+}
+ 
+function copyDoi(doi) {
+  navigator.clipboard.writeText(doi).then(() => showToast('DOI copied to clipboard.', 'success'));
+}
+ 
+function setFilter(type, val, btn) {
+  activeFilters[type] = val;
+  const group = btn.closest('.filter-options');
+  group.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderPubs();
+}
+ 
+function filterPubs() { renderPubs(); }
+ 
+// ===== PORTAL TABS =====
+function switchTab(tab) {
+  document.querySelectorAll('.portal-tab').forEach((t, i) => {
+    const tabs = ['login','publish','register'];
+    t.classList.toggle('active', tabs[i] === tab);
+  });
+  document.querySelectorAll('.portal-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById('tab-' + tab).classList.add('active');
+}
+ 
+// ===== FORMS =====
+function handleLogin(e) {
+  e.preventDefault();
+  showSuccess('Signed In Successfully', 'Welcome back! Redirecting to your member dashboard…');
+}
+ 
+function handleRegister(e) {
+  e.preventDefault();
+  showSuccess('Account Created', 'Your GSRI member account has been created. Please check your email to verify your account.');
+}
+ 
+function submitApplication(e) {
+  e.preventDefault();
+  showSuccess('Application Submitted', 'Thank you for applying to GSRI. Our team will review your application and contact you within 5–7 business days. The filter question will be carefully read.');
+}
+ 
+function submitPublication(e) {
+  e.preventDefault();
+  // Add to publications array for demo
+  showSuccess('Publication Submitted 🎓', 'Your paper has been submitted to the GSRI institutional repository. It will appear in the Publications section after review by the Academic Director.');
+}
+ 
+function submitContact(e) {
+  e.preventDefault();
+  showSuccess('Message Received', 'Thank you for reaching out to GSRI. A member of the leadership team will respond to your inquiry within 3–5 business days.');
+}
+ 
+function handleForgot(e) {
+  e.preventDefault();
+  closeModal('forgot-modal');
+  showToast('If your account exists, a reset link has been sent.', 'success');
+}
+ 
+function handleFileSelect(input) {
+  const fn = document.getElementById('file-name');
+  if (input.files.length > 0) {
+    fn.textContent = '✓ ' + input.files[0].name;
+    fn.style.display = 'block';
+  }
+}
+ 
+// ===== MODALS =====
+function showForgotModal(e) { e.preventDefault(); openModal('forgot-modal'); }
+ 
+function openModal(id) { document.getElementById(id).classList.add('open'); }
+function closeModal(id) { document.getElementById(id).classList.remove('open'); }
+ 
+function showSuccess(title, body, icon = '✅') {
+  document.getElementById('success-icon').textContent = icon;
+  document.getElementById('success-title').textContent = title;
+  document.getElementById('success-body').textContent = body;
+  openModal('success-modal');
+}
+ 
+// ===== TOAST =====
+function showToast(msg, type = '') {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'toast' + (type ? ' ' + type : '');
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3500);
+}
+ 
+// ===== MOBILE NAV =====
+function toggleMobileMenu() {
+  const nav = document.getElementById('mobile-nav');
+  nav.style.display = nav.style.display === 'none' ? 'block' : 'none';
+}
+ 
+// ===== SCROLL ANIMATIONS =====
+function initAnimations() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+}
+ 
+// Close modal on overlay click
+document.querySelectorAll('.modal-overlay').forEach(overlay => {
+  overlay.addEventListener('click', function(e) {
+    if (e.target === this) this.classList.remove('open');
+  });
+});
+ 
+// ===== INIT =====
+document.addEventListener('DOMContentLoaded', () => {
+  initAnimations();
+  renderPubs();
+});
+</script>
+</body>
+</html>
